@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 14.3%, 4.1%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13.8%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 14.3%, 4.1%);
+  --border: hsl(214, 31.8%, 91.4%);
+  --input: hsl(214, 31.8%, 91.4%);
+  --primary: hsl(240, 100%, 27%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(220, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Kranti Custom Colors */
+  --kranti-navy: hsl(224, 76%, 32%);
+  --kranti-black: hsl(222, 84%, 4.9%);
+  --kranti-blue: hsl(217, 91%, 60%);
+  --kranti-gold: hsl(45, 93%, 47%);
+  --kranti-slate: hsl(215, 20%, 40%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32.6%, 17.5%);
+  --input: hsl(217, 32.6%, 17.5%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222, 84%, 4.9%);
+  --secondary: hsl(217, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-kranti-black text-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-kranti-navy {
+    background-color: var(--kranti-navy);
+  }
+  
+  .bg-kranti-black {
+    background-color: var(--kranti-black);
+  }
+  
+  .bg-kranti-blue {
+    background-color: var(--kranti-blue);
+  }
+  
+  .bg-kranti-gold {
+    background-color: var(--kranti-gold);
+  }
+  
+  .text-kranti-navy {
+    color: var(--kranti-navy);
+  }
+  
+  .text-kranti-black {
+    color: var(--kranti-black);
+  }
+  
+  .text-kranti-blue {
+    color: var(--kranti-blue);
+  }
+  
+  .text-kranti-gold {
+    color: var(--kranti-gold);
+  }
+  
+  .text-kranti-slate {
+    color: var(--kranti-slate);
+  }
+  
+  .border-kranti-navy {
+    border-color: var(--kranti-navy);
+  }
+  
+  .border-kranti-blue {
+    border-color: var(--kranti-blue);
+  }
+  
+  .border-kranti-gold {
+    border-color: var(--kranti-gold);
+  }
+}
