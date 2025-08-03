@@ -12,7 +12,7 @@ execSync('npx vite build', {
 // Copy static assets to the build directory
 console.log('Copying static assets...');
 const publicDir = join(process.cwd(), 'client', 'public');
-const distDir = join(process.cwd(), 'dist', 'public');
+const distDir = join(process.cwd(), 'dist');
 
 // Copy photos directory
 execSync(`cp -r ${join(publicDir, 'photos')} ${distDir}/`, { stdio: 'inherit' });
