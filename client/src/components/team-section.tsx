@@ -21,7 +21,7 @@ export default function TeamSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+            <div key={index} className="group relative bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/30 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
               <img 
                 src={member.image} 
                 alt={`${member.name} portrait`} 
@@ -39,7 +39,7 @@ export default function TeamSection() {
         <div className="text-center mt-12">
           <button 
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-kranti-blue to-kranti-navy text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-kranti-blue/30 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-kranti-blue via-kranti-purple to-kranti-navy text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-kranti-blue/30 transition-all duration-300 transform hover:scale-105"
           >
             <span>Join Our Musical Revolution</span>
             <ArrowRight />

@@ -3,16 +3,16 @@ import { Play } from "lucide-react";
 export default function MusicSection() {
   const featuredVideos = [
     {
-      title: "To the Moon",
-      subtitle: "Jnr Choi & Sam Tompkins Cover",
+      title: "Spring 2025 Showcase",
+      subtitle: "",
       description: "Our latest fusion performance showcasing the perfect blend of American and South Asian musical styles.",
-      embedId: "dQw4w9WgXcQ" // Placeholder - would be actual YouTube video ID
+      embedId: "PLKPKF8cd10xW-h0S8FI-_eie-PLjHGerI" // YouTube playlist ID from the provided link
     },
     {
-      title: "Culture Show Performance",
-      subtitle: "Traditional & Modern Fusion",
+      title: "Steel City Sapna 2025 Performance",
+      subtitle: "",
       description: "Highlights from our annual Culture Show performance featuring intricate vocal arrangements.",
-      embedId: "dQw4w9WgXcQ" // Placeholder - would be actual YouTube video ID
+      embedId: "xwG44-k5K9Q" // YouTube video ID from the provided link
     }
   ];
 
@@ -44,10 +44,10 @@ export default function MusicSection() {
   const photoTitles = ["Culture Show Performance", "Traditional Fusion Set", "Hopkins O-Show", "Behind the Scenes"];
 
   return (
-    <section id="music" className="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/20">
+    <section id="music" className="py-20 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-orange/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white">Our Music</h2>
+          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Our Music</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the revolutionary fusion of East and West through our performances and recordings.
           </p>
@@ -55,24 +55,26 @@ export default function MusicSection() {
 
         {/* Featured Videos Section */}
         <div className="mb-16">
-          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Featured Performances</h3>
+          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>Featured Performances</h3>
           <div className="grid lg:grid-cols-2 gap-8">
             {featuredVideos.map((video, index) => (
-              <div key={index} className="bg-kranti-navy/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300">
-                <div className="aspect-video bg-gray-800 relative group cursor-pointer">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <i className="fab fa-youtube text-red-500 text-6xl mb-4"></i>
-                      <p className="text-white font-semibold">{video.title}</p>
-                      <p className="text-gray-300 text-sm mt-2">{video.subtitle}</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Play className="text-white text-4xl" />
-                  </div>
+              <div key={index} className="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/30 hover:border-kranti-gold/50 transition-all duration-300">
+                <div className="aspect-video bg-gray-800 relative">
+                  <iframe
+                    src={video.embedId.startsWith('PL') 
+                      ? `https://www.youtube.com/embed/videoseries?list=${video.embedId}`
+                      : `https://www.youtube.com/embed/${video.embedId}`
+                    }
+                    title={video.title}
+                    className="w-full h-full rounded-t-xl"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-semibold text-xl text-white mb-2">{video.title}</h4>
+                  {video.subtitle && <p className="text-kranti-gold text-sm mb-2">{video.subtitle}</p>}
                   <p className="text-gray-300 text-sm">{video.description}</p>
                 </div>
               </div>
@@ -82,10 +84,10 @@ export default function MusicSection() {
 
         {/* Spotify Section */}
         <div className="mb-16">
-          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Listen on Spotify</h3>
+          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>Listen on Spotify</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {albums.map((album, index) => (
-              <div key={index} className="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 group cursor-pointer">
+              <div key={index} className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 backdrop-blur-sm rounded-xl p-6 border border-kranti-teal/30 hover:border-kranti-gold/50 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center space-x-4 mb-4">
                   <i className="fab fa-spotify text-green-500 text-3xl group-hover:scale-110 transition-transform duration-300"></i>
                   <div>
@@ -101,7 +103,7 @@ export default function MusicSection() {
 
         {/* Performance Gallery */}
         <div>
-          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Performance Gallery</h3>
+          <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>Performance Gallery</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {performancePhotos.map((photo, index) => (
               <div key={index} className="relative group cursor-pointer rounded-xl overflow-hidden">

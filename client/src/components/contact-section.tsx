@@ -69,10 +69,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-kranti-black">
+    <section id="contact" className="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white">Get In Touch</h2>
+          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Get In Touch</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to book a performance or collaborate? Let's create something revolutionary together.
           </p>
@@ -82,10 +82,10 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="font-semibold text-2xl text-kranti-gold mb-6">Connect With Us</h3>
+              <h3 className="font-semibold text-2xl text-kranti-gold mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>Connect With Us</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-kranti-navy/30 p-3 rounded-lg">
+                  <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 p-3 rounded-lg">
                     <Mail className="text-kranti-gold text-xl" />
                   </div>
                   <div>
@@ -95,7 +95,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-kranti-navy/30 p-3 rounded-lg">
+                  <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 p-3 rounded-lg">
                     <MapPin className="text-kranti-gold text-xl" />
                   </div>
                   <div>
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-kranti-navy/30 p-3 rounded-lg">
+                  <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 p-3 rounded-lg">
                     <Calendar className="text-kranti-gold text-xl" />
                   </div>
                   <div>
@@ -131,7 +131,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+            <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 backdrop-blur-sm rounded-xl p-6 border border-kranti-purple/30">
               <h4 className="font-semibold text-xl text-kranti-gold mb-3">Join Our Revolution</h4>
               <p className="text-gray-300 mb-4">Interested in auditioning for JHU Kranti? We hold auditions at the beginning of each semester.</p>
               <p className="text-sm text-gray-400">Next auditions: Fall 2024 semester</p>
@@ -139,8 +139,8 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl p-8 border border-kranti-blue/20">
-            <h3 className="font-semibold text-2xl text-white mb-6">Send Us a Message</h3>
+          <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 backdrop-blur-sm rounded-xl p-8 border border-kranti-teal/30">
+            <h3 className="font-semibold text-2xl text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -208,7 +208,7 @@ export default function ContactSection() {
               <Button 
                 type="submit" 
                 disabled={submitContactForm.isPending}
-                className="w-full bg-gradient-to-r from-kranti-gold to-amber-500 text-kranti-black font-semibold hover:shadow-lg hover:shadow-kranti-gold/30 transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold hover:shadow-lg hover:shadow-kranti-gold/30 transition-all duration-300 transform hover:scale-105"
               >
                 {submitContactForm.isPending ? "Sending..." : "Send Message"}
               </Button>

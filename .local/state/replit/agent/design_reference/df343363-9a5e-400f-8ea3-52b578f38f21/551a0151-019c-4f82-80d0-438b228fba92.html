@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHU Kranti - South Asian Fusion A Cappella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kranti-navy': '#1E3A8A',
+                        'kranti-black': '#0F172A',
+                        'kranti-blue': '#3B82F6',
+                        'kranti-gold': '#F59E0B',
+                        'kranti-slate': '#475569'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-kranti-black text-white font-open-sans">
+    <!-- @COMPONENT: NavigationBar [fixed header with smooth scroll navigation] -->
+    <nav class="fixed top-0 w-full bg-kranti-black/90 backdrop-blur-sm border-b border-kranti-navy/30 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-music text-kranti-gold text-2xl"></i>
+                    <span class="font-inter font-bold text-xl">JHU Kranti</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-kranti-gold transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-kranti-gold transition-colors duration-300">About</a>
+                    <a href="#team" class="nav-link text-gray-300 hover:text-kranti-gold transition-colors duration-300">Team</a>
+                    <a href="#music" class="nav-link text-gray-300 hover:text-kranti-gold transition-colors duration-300">Music</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-kranti-gold transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="https://www.instagram.com/jhu_kranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/jhukranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-300" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-kranti-black/95 backdrop-blur-sm border-t border-kranti-navy/30 hidden" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">About</a>
+                <a href="#team" class="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">Team</a>
+                <a href="#music" class="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">Music</a>
+                <a href="#contact" class="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">Contact</a>
+                <div class="flex space-x-4 pt-3">
+                    <a href="https://www.instagram.com/jhu_kranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/jhukranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationBar -->
+
+    <!-- @COMPONENT: HeroSection [main landing area with group identity] -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-kranti-navy via-kranti-black to-kranti-black"></div>
+        <div class="absolute inset-0 opacity-10">
+            <!-- Cultural pattern overlay -->
+            <div class="h-full w-full" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%223%22 fill=%22%23F59E0B%22/><circle cx=%2225%22 cy=%2225%22 r=%222%22 fill=%22%23F59E0B%22/><circle cx=%2275%22 cy=%2275%22 r=%222%22 fill=%22%23F59E0B%22/></svg>'); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+            <h1 class="font-inter font-bold text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-white via-kranti-gold to-kranti-blue bg-clip-text text-transparent">
+                JHU Kranti
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-4 font-light">
+                South Asian Fusion A Cappella
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Johns Hopkins' premier co-ed South Asian Fusion a cappella group, seamlessly blending traditional and modern Indian musical forms with contemporary Western songs since 2003.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#music" class="bg-gradient-to-r from-kranti-gold to-amber-500 text-kranti-black font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-kranti-gold/30 transition-all duration-300 transform hover:scale-105">
+                    Listen to Our Music
+                </a>
+                <a href="#about" class="border-2 border-kranti-blue text-kranti-blue font-semibold px-8 py-3 rounded-full hover:bg-kranti-blue hover:text-white transition-all duration-300">
+                    Learn Our Story
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-kranti-gold text-2xl"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: AboutSection [group history and legacy] -->
+    <section id="about" class="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-4xl md:text-5xl mb-6 text-white">Our Revolution</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    The word "kranti" means "revolution" in Hindi, and we embody this spirit in everything we do.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <h3 class="font-inter font-semibold text-2xl md:text-3xl text-kranti-gold">Our Mission</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Established in 2003, JHU Kranti has been at the forefront of cultural fusion in collegiate a cappella. We strive to present a unique vocal combination of East and West, creating revolutionary performances that honor our heritage while pushing musical boundaries.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our performances seamlessly blend traditional and modern Indian musical forms with contemporary Western songs, creating an entirely new musical experience that celebrates both cultures.
+                    </p>
+                </div>
+                <div class="relative">
+                    <!-- Group performing on stage with traditional and modern elements -->
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Cultural performance on stage" class="rounded-xl shadow-2xl w-full" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/60 to-transparent rounded-xl"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-kranti-navy/30 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                    <div class="text-kranti-gold text-3xl mb-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 class="font-inter font-semibold text-xl mb-3 text-white">Since 2003</h4>
+                    <p class="text-gray-300">Over 20 years of musical innovation and cultural bridge-building at Johns Hopkins University.</p>
+                </div>
+                
+                <div class="bg-kranti-navy/30 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                    <div class="text-kranti-gold text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="font-inter font-semibold text-xl mb-3 text-white">Co-ed Excellence</h4>
+                    <p class="text-gray-300">Bringing together diverse voices and backgrounds to create harmony that transcends cultural boundaries.</p>
+                </div>
+                
+                <div class="bg-kranti-navy/30 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                    <div class="text-kranti-gold text-3xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h4 class="font-inter font-semibold text-xl mb-3 text-white">Fusion Innovation</h4>
+                    <p class="text-gray-300">Pioneering the art of South Asian-Western musical fusion in the collegiate a cappella scene.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h3 class="font-inter font-semibold text-2xl md:text-3xl text-white mb-8">Recent Highlights</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                        <h4 class="font-inter font-semibold text-xl text-kranti-gold mb-3">O-Show 2023</h4>
+                        <p class="text-gray-300">"To the Moon" by Jnr Choi and Sam Tompkins - a perfect blend of American and South Asian styles that captivated the Hopkins community.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                        <h4 class="font-inter font-semibold text-xl text-kranti-gold mb-3">Culture Show</h4>
+                        <p class="text-gray-300">Regular performances at Johns Hopkins' annual Culture Show, showcasing intricate vocal lines with crystal clarity in our South Asian arrangements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: TeamSection [current team member profiles] -->
+    <section id="team" class="py-20 bg-kranti-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-4xl md:text-5xl mb-6 text-white">Meet Our Artists</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Talented voices from diverse backgrounds united by our passion for musical fusion.
+                </p>
+            </div>
+
+            <!-- @MAP: teamMembers.map(member => ( -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young South Asian woman smiling confidently -->
+                    <img src="https://pixabay.com/get/g029d6a686fbea8a47568e2962eeb10be0ad6ff85850158ec0db46f62a3a800898ccbc7bb0b3bf608c2369b0088311f15892c3410479d330bf91d658fdd08734e_1280.jpg" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Priya Sharma</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Music Director</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Senior studying Biomedical Engineering with a passion for classical Indian vocals and contemporary fusion.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young man with warm smile -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Arjun Patel</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">President</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Junior in International Studies, bringing leadership and a deep love for cross-cultural musical expression.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young woman with artistic expression -->
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Maya Chen</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Vocal Percussionist</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Sophomore in Computer Science, specializing in both Western beatboxing and Indian tabla rhythms.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a confident young man -->
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Rohan Kumar</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Bass Vocalist</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Senior in Mechanical Engineering, providing the foundational bass lines that anchor our fusion arrangements.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young woman with bright expression -->
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Anaya Singh</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Soprano</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Junior in Public Health, bringing soaring melodies and traditional Indian vocal techniques to our performances.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young man with creative energy -->
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Dev Gupta</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Tenor</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Sophomore in Psychology, contributing versatile vocals and arrangement expertise to our repertoire.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young woman with musical passion -->
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Rhea Nair</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Alto</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Senior in Neuroscience, adding rich harmonic textures and cultural authenticity to our sound.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="group relative bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Portrait of a young man with enthusiastic smile -->
+                    <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Team member portrait" class="w-full h-64 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="font-inter font-semibold text-xl text-white mb-1" data-bind="member.name">Karan Shah</h3>
+                        <p class="text-kranti-gold text-sm font-medium mb-3" data-bind="member.role">Baritone</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-bind="member.bio">Junior in Economics, bringing powerful mid-range vocals and business leadership to the group.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center space-x-2 bg-gradient-to-r from-kranti-blue to-kranti-navy text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-kranti-blue/30 transition-all duration-300 transform hover:scale-105">
+                    <span>Join Our Musical Revolution</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TeamSection -->
+
+    <!-- @COMPONENT: MusicSection [YouTube videos, Spotify albums, performance gallery] -->
+    <section id="music" class="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-4xl md:text-5xl mb-6 text-white">Our Music</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Experience the revolutionary fusion of East and West through our performances and recordings.
+                </p>
+            </div>
+
+            <!-- Featured Videos Section -->
+            <div class="mb-16">
+                <h3 class="font-inter font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Featured Performances</h3>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Video 1 -->
+                    <div class="bg-kranti-navy/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300">
+                        <div class="aspect-video bg-gray-800 relative group cursor-pointer" data-implementation="Embed YouTube video player">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fab fa-youtube text-red-500 text-6xl mb-4"></i>
+                                    <p class="text-white font-semibold">To the Moon - O-Show 2023</p>
+                                    <p class="text-gray-300 text-sm mt-2">Jnr Choi & Sam Tompkins Cover</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-4xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-inter font-semibold text-xl text-white mb-2">To the Moon</h4>
+                            <p class="text-gray-300 text-sm">Our latest fusion performance showcasing the perfect blend of American and South Asian musical styles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="bg-kranti-navy/30 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300">
+                        <div class="aspect-video bg-gray-800 relative group cursor-pointer" data-implementation="Embed YouTube video player">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fab fa-youtube text-red-500 text-6xl mb-4"></i>
+                                    <p class="text-white font-semibold">Culture Show Highlights</p>
+                                    <p class="text-gray-300 text-sm mt-2">Traditional & Modern Fusion</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-4xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-inter font-semibold text-xl text-white mb-2">Culture Show Performance</h4>
+                            <p class="text-gray-300 text-sm">Highlights from our annual Culture Show performance featuring intricate vocal arrangements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify Section -->
+            <div class="mb-16">
+                <h3 class="font-inter font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Listen on Spotify</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Album 1 -->
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 group cursor-pointer" data-implementation="Link to Spotify album">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i class="fab fa-spotify text-green-500 text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                            <div>
+                                <h4 class="font-inter font-semibold text-white">Fusion Revolution</h4>
+                                <p class="text-gray-300 text-sm">Latest Album • 2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm">Our newest collection featuring innovative East-West musical fusions and contemporary hits reimagined.</p>
+                    </div>
+
+                    <!-- Album 2 -->
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 group cursor-pointer" data-implementation="Link to Spotify album">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i class="fab fa-spotify text-green-500 text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                            <div>
+                                <h4 class="font-inter font-semibold text-white">Classical Meets Modern</h4>
+                                <p class="text-gray-300 text-sm">EP • 2022</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm">Traditional Indian ragas beautifully woven into contemporary Western melodies and arrangements.</p>
+                    </div>
+
+                    <!-- Album 3 -->
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20 hover:border-kranti-gold/50 transition-all duration-300 group cursor-pointer" data-implementation="Link to Spotify album">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i class="fab fa-spotify text-green-500 text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                            <div>
+                                <h4 class="font-inter font-semibold text-white">Cultural Bridges</h4>
+                                <p class="text-gray-300 text-sm">Album • 2021</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm">A full-length album celebrating the rich tapestry of cross-cultural musical collaboration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Gallery -->
+            <div>
+                <h3 class="font-inter font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center">Performance Gallery</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Performance Photo 1 -->
+                    <!-- A cappella group performing in traditional and modern fusion attire on stage -->
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500" alt="A cappella group performing on stage" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 font-medium">Culture Show Performance</p>
+                        </div>
+                    </div>
+
+                    <!-- Performance Photo 2 -->
+                    <!-- Close-up of musicians in traditional Indian attire singing -->
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500" alt="Musicians in traditional attire performing" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 font-medium">Traditional Fusion Set</p>
+                        </div>
+                    </div>
+
+                    <!-- Performance Photo 3 -->
+                    <!-- Wide shot of performance venue with audience -->
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500" alt="Performance venue with engaged audience" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 font-medium">Hopkins O-Show</p>
+                        </div>
+                    </div>
+
+                    <!-- Performance Photo 4 -->
+                    <!-- Backstage preparation and rehearsal moments -->
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500" alt="Musicians rehearsing in studio setting" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 font-medium">Behind the Scenes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-red-600/30 transition-all duration-300 transform hover:scale-105 mr-4">
+                    <i class="fab fa-youtube"></i>
+                    <span>Watch More on YouTube</span>
+                </a>
+                <a href="#" class="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300 transform hover:scale-105" data-implementation="Link to Spotify profile">
+                    <i class="fab fa-spotify"></i>
+                    <span>Listen on Spotify</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: MusicSection -->
+
+    <!-- @COMPONENT: ContactSection [contact form and booking information] -->
+    <section id="contact" class="py-20 bg-kranti-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-4xl md:text-5xl mb-6 text-white">Get In Touch</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to book a performance or collaborate? Let's create something revolutionary together.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-inter font-semibold text-2xl text-kranti-gold mb-6">Connect With Us</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-kranti-navy/30 p-3 rounded-lg">
+                                    <i class="fas fa-envelope text-kranti-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white mb-1">Email</h4>
+                                    <p class="text-gray-300" data-bind="contact.email">jhukranti@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-kranti-navy/30 p-3 rounded-lg">
+                                    <i class="fas fa-map-marker-alt text-kranti-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white mb-1">Location</h4>
+                                    <p class="text-gray-300">Johns Hopkins University<br>Baltimore, MD</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-kranti-navy/30 p-3 rounded-lg">
+                                    <i class="fas fa-calendar text-kranti-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white mb-1">Performance Booking</h4>
+                                    <p class="text-gray-300">Available for campus events, cultural shows, and private performances</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-inter font-semibold text-xl text-white mb-4">Follow Our Journey</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/jhu_kranti/" target="_blank" class="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
+                                <i class="fab fa-instagram text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/jhukranti/" target="_blank" class="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
+                                <i class="fab fa-facebook text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
+                            </a>
+                            <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" class="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
+                                <i class="fab fa-youtube text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-black/40 backdrop-blur-sm rounded-xl p-6 border border-kranti-blue/20">
+                        <h4 class="font-inter font-semibold text-xl text-kranti-gold mb-3">Join Our Revolution</h4>
+                        <p class="text-gray-300 mb-4">Interested in auditioning for JHU Kranti? We hold auditions at the beginning of each semester.</p>
+                        <p class="text-sm text-gray-400">Next auditions: Fall 2024 semester</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gradient-to-br from-kranti-navy/30 to-kranti-black/30 backdrop-blur-sm rounded-xl p-8 border border-kranti-blue/20">
+                    <h3 class="font-inter font-semibold text-2xl text-white mb-6">Send Us a Message</h3>
+                    <form class="space-y-6" data-implementation="Handle form submission">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 bg-kranti-black/50 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:border-kranti-gold focus:ring-1 focus:ring-kranti-gold focus:outline-none transition-all duration-300" placeholder="Your first name" />
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 bg-kranti-black/50 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:border-kranti-gold focus:ring-1 focus:ring-kranti-gold focus:outline-none transition-all duration-300" placeholder="Your last name" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-kranti-black/50 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:border-kranti-gold focus:ring-1 focus:ring-kranti-gold focus:outline-none transition-all duration-300" placeholder="your.email@example.com" />
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 bg-kranti-black/50 border border-kranti-blue/30 rounded-lg text-white focus:border-kranti-gold focus:ring-1 focus:ring-kranti-gold focus:outline-none transition-all duration-300">
+                                <option value="">Select a subject</option>
+                                <option value="performance">Performance Booking</option>
+                                <option value="collaboration">Collaboration Inquiry</option>
+                                <option value="audition">Audition Information</option>
+                                <option value="media">Media/Press</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-kranti-black/50 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:border-kranti-gold focus:ring-1 focus:ring-kranti-gold focus:outline-none transition-all duration-300 resize-none" placeholder="Tell us about your inquiry..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-kranti-gold to-amber-500 text-kranti-black font-semibold py-3 px-6 rounded-lg hover:shadow-lg hover:shadow-kranti-gold/30 transition-all duration-300 transform hover:scale-105" data-event="click:handleSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer [simple footer with copyright and links] -->
+    <footer class="bg-kranti-navy/20 border-t border-kranti-navy/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <i class="fas fa-music text-kranti-gold text-2xl"></i>
+                    <span class="font-inter font-bold text-2xl text-white">JHU Kranti</span>
+                </div>
+                <p class="text-gray-400 mb-6">Johns Hopkins University's Premier South Asian Fusion A Cappella Group</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.instagram.com/jhu_kranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/jhukranti/" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">&copy; 2024 JHU Kranti. All rights reserved. | Established 2003</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Navigation functionality
+        (function() {
+            const navbar = document.getElementById('navbar');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('bg-kranti-black/95');
+                } else {
+                    navbar.classList.remove('bg-kranti-black/95');
+                }
+            });
+
+            // Active section highlighting
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-kranti-gold');
+                    link.classList.add('text-gray-300');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.remove('text-gray-300');
+                        link.classList.add('text-kranti-gold');
+                    }
+                });
+            });
+        })();
+
+        // Form handling
+        (function() {
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form submission logic
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                });
+            }
+        })();
+
+        // Gallery modal functionality placeholder
+        (function() {
+            const galleryImages = document.querySelectorAll('.grid img');
+            galleryImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    // TODO: Implement modal gallery functionality
+                    console.log('Gallery modal would open here');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

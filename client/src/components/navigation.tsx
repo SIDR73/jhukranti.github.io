@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Music, Menu, X } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,13 +24,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full backdrop-blur-sm border-b border-kranti-navy/30 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 w-full backdrop-blur-sm border-b border-kranti-purple/30 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-kranti-black/95' : 'bg-kranti-black/90'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <Music className="text-kranti-gold text-2xl" />
+            <img src="/photos/kranti_vector_logo.svg" alt="Kranti Logo" className="w-8 h-8" />
             <span className="font-bold text-xl">JHU Kranti</span>
           </div>
           
@@ -41,9 +42,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <button onClick={() => scrollToSection('team')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <Link href="/team" className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
-            </button>
+            </Link>
             <button onClick={() => scrollToSection('music')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Music
             </button>
@@ -77,7 +78,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-kranti-black/95 backdrop-blur-sm border-t border-kranti-navy/30">
+        <div className="md:hidden bg-kranti-black/95 backdrop-blur-sm border-t border-kranti-purple/30">
           <div className="px-4 py-3 space-y-3">
             <button onClick={() => scrollToSection('home')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Home
@@ -85,9 +86,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <button onClick={() => scrollToSection('team')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <Link href="/team" className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
-            </button>
+            </Link>
             <button onClick={() => scrollToSection('music')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Music
             </button>
