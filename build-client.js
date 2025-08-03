@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import { copyFileSync, mkdirSync } from 'fs';
+import { copyFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 
 // Build the client using Vite
@@ -9,12 +9,25 @@ execSync('npx vite build', {
   stdio: 'inherit' 
 });
 
-// Copy static assets to the build directory
-console.log('Copying static assets...');
-const publicDir = join(process.cwd(), 'client', 'public');
-const distDir = join(process.cwd(), 'dist');
+// Copy build files to root dist directory
+console.log('Copying build files...');
+const clientDistDir = join(process.cwd(), 'client', 'dist');
+const rootDistDir = join(process.cwd(), 'dist');
 
-// Copy photos directory
-execSync(`cp -r ${join(publicDir, 'photos')} ${distDir}/`, { stdio: 'inherit' });
+// Create root dist directory if it doesn't exist
+if (!existsSync(rootDistDir)) {
+  mkdirSync(rootDistDir, { recursive: true });
+}
+
+// Copy all files from client/dist to root dist
+execSync(`cp -r ${clientDistDir}/* ${rootDistDir}/`, { stdio: 'inherit' });
+
+// Verify the build files exist
+console.log('Verifying build files...');
+if (existsSync(join(rootDistDir, 'index.html'))) {
+  console.log('✅ index.html found');
+} else {
+  console.log('❌ index.html missing');
+}
 
 console.log('Build complete!'); 
