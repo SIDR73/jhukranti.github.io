@@ -2,9 +2,12 @@ import { execSync } from 'child_process';
 import { copyFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-// Build the client
+// Build the client using Vite
 console.log('Building client...');
-execSync('npm run build', { stdio: 'inherit' });
+execSync('npx vite build', { 
+  cwd: join(process.cwd(), 'client'),
+  stdio: 'inherit' 
+});
 
 // Copy static assets to the build directory
 console.log('Copying static assets...');
