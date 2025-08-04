@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div 
           className="h-full w-full bg-cover bg-center bg-no-repeat hero-background" 
           style={{
-            backgroundImage: `url("/photos/IMG_7731.JPG")`
+            backgroundImage: `url("./photos/IMG_7731.JPG")`
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-kranti-black/80 via-kranti-black/60 to-kranti-purple/40"></div>

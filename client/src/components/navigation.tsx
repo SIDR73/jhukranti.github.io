@@ -30,7 +30,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <img src="/photos/kranti_vector_logo.svg" alt="Kranti Logo" className="w-8 h-8" />
+            <img src="./photos/kranti_vector_logo.svg" alt="Kranti Logo" className="w-8 h-8" />
             <span className="font-bold text-xl">JHU Kranti</span>
           </div>
           

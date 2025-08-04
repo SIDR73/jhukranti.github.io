@@ -18,7 +18,7 @@ export default function AboutSection() {
           </div>
           <div className="relative">
             <img 
-              src="/photos/JHUKranti_Group.jpg" 
+              src="./photos/JHUKranti_Group.jpg" 
               alt="JHU Kranti performing on stage in traditional South Asian attire" 
               className="rounded-xl shadow-2xl w-full object-cover" 
             />

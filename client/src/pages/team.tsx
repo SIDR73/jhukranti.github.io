@@ -6,115 +6,115 @@ const teamMembers = [
     firstName: "Advika",
     lastName: "Agrawal",
     part: "Soprano",
-    photo: "/photos/Team/Advika_Agrawal.jpg"
+    photo: "./photos/Team/Advika_Agrawal.jpg"
   },
   {
     firstName: "Anika",
     lastName: "Narayan",
     part: "Alto",
-    photo: "/photos/Team/Anika_Narayan.png"
+    photo: "./photos/Team/Anika_Narayan.png"
   },
   {
     firstName: "Arihant",
     lastName: "Patni",
     part: "Baritone",
-    photo: "/photos/Team/Arihant_Patni.png"
+    photo: "./photos/Team/Arihant_Patni.png"
   },
   {
     firstName: "Avi",
     lastName: "Mehta",
     part: "Vocal Percussion",
-    photo: "/photos/Team/Avi_Mehta.jpg"
+    photo: "./photos/Team/Avi_Mehta.jpg"
   },
   {
     firstName: "Hasitha",
     lastName: "Putcha",
     part: "Alto",
-    photo: "/photos/Team/Hasitha_Putcha.jpg"
+    photo: "./photos/Team/Hasitha_Putcha.jpg"
   },
   {
     firstName: "Hassan",
     lastName: "Sohail",
     part: "Tenor",
-    photo: "/photos/Team/Hassan_Sohail.jpg"
+    photo: "./photos/Team/Hassan_Sohail.jpg"
   },
   {
     firstName: "Julie",
     lastName: "Alan",
     part: "Soprano",
-    photo: "/photos/Team/Julie_Alan.png"
+    photo: "./photos/Team/Julie_Alan.png"
   },
   {
     firstName: "Kavya",
     lastName: "Velliangiri",
     part: "Alto",
-    photo: "/photos/Team/Kavya_Velliangiri.jpg"
+    photo: "./photos/Team/Kavya_Velliangiri.jpg"
   },
   {
     firstName: "Navya",
     lastName: "Balamurugan",
     part: "Mezzo",
-    photo: "/photos/Team/Navya_Balamurugan.png"
+    photo: "./photos/Team/Navya_Balamurugan.png"
   },
   {
     firstName: "Oorvi",
     lastName: "Moolchandani",
     part: "Mezzo",
-    photo: "/photos/Team/Oorvi_Moolchandani.jpg"
+    photo: "./photos/Team/Oorvi_Moolchandani.jpg"
   },
   {
     firstName: "Riya",
     lastName: "Verma",
     part: "Mezzo",
-    photo: "/photos/Team/Riya_Verma.jpg"
+    photo: "./photos/Team/Riya_Verma.jpg"
   },
   {
     firstName: "Rohit",
     lastName: "Thapa",
     part: "Baritone",
-    photo: "/photos/Team/Rohit_Thapa.jpg"
+    photo: "./photos/Team/Rohit_Thapa.jpg"
   },
   {
     firstName: "Sharada",
     lastName: "Vishwanath",
     part: "Alto",
-    photo: "/photos/Team/Sharada_Vishwanath.jpg"
+    photo: "./photos/Team/Sharada_Vishwanath.jpg"
   },
   {
     firstName: "Shivesh",
     lastName: "Mishra",
     part: "Tenor",
-    photo: "/photos/Team/Shivesh_Mishra.png"
+    photo: "./photos/Team/Shivesh_Mishra.png"
   },
   {
     firstName: "Shreya",
     lastName: "Raman",
     part: "Mezzo",
-    photo: "/photos/Team/Shreya_Raman.jpg"
+    photo: "./photos/Team/Shreya_Raman.jpg"
   },
   {
     firstName: "Sidharth",
     lastName: "Raghavan",
     part: "Bass Vocalist",
-    photo: "/photos/Team/Sidharth_Raghavan.png"
+    photo: "./photos/Team/Sidharth_Raghavan.png"
   },
   {
     firstName: "Varsha",
     lastName: "Arun",
     part: "Mezzo",
-    photo: "/photos/Team/Varsha_Arun.jpg"
+    photo: "./photos/Team/Varsha_Arun.jpg"
   },
   {
     firstName: "Viha",
     lastName: "Chakrapani",
     part: "Soprano",
-    photo: "/photos/Team/Viha_Chakrapani.png"
+    photo: "./photos/Team/Viha_Chakrapani.png"
   },
   {
     firstName: "Yara",
     lastName: "Changyit-Levin",
     part: "Alto",
-    photo: "/photos/Team/Yara_Changyit-Levin.png"
+    photo: "./photos/Team/Yara_Changyit-Levin.png"
   }
 ];
 
