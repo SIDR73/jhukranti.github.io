@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Music, Menu, X } from "lucide-react";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +42,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <Link href="/team" className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <Link to="/team" className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
             </Link>
             <button onClick={() => scrollToSection('music')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
@@ -86,7 +86,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <Link href="/team" className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <Link to="/team" className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
             </Link>
             <button onClick={() => scrollToSection('music')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">

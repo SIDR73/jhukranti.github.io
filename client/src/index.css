@@ -37,7 +37,7 @@
   --kranti-navy: hsl(224, 76%, 28%);
   --kranti-black: hsl(222, 84%, 4.9%);
   --kranti-blue: hsl(217, 91%, 65%);
-  --kranti-gold: hsl(0, 50%, 35%);
+  --kranti-gold: hsl(0, 0%, 100%);
   --kranti-slate: hsl(215, 20%, 40%);
   --kranti-orange: hsl(25, 95%, 53%);
   --kranti-purple: hsl(262, 83%, 58%);
@@ -225,4 +225,23 @@
   .border-kranti-teal {
     border-color: var(--kranti-teal);
   }
+}
+
+/* Custom scrollbar for track list */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--kranti-purple);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--kranti-gold);
 }
