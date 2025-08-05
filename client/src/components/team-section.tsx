@@ -41,7 +41,7 @@ export default function TeamSection() {
             onClick={() => scrollToSection('contact')}
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-kranti-blue via-kranti-purple to-kranti-navy text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-kranti-blue/30 transition-all duration-300 transform hover:scale-105"
           >
-            <span>Join Our Musical Revolution</span>
+            <span>Join Our Team</span>
             <ArrowRight />
           </button>
         </div>

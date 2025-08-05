@@ -72,9 +72,9 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Get In Touch</h2>
+          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Join Our Team</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to book a performance or collaborate? Let's create something revolutionary together.
+            Ready to be part of the revolution? Audition for JHU Kranti and create something revolutionary together.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Email</h4>
-                    <p className="text-gray-300">jhukranti@gmail.com</p>
+                    <p className="text-gray-300">johnshopkinskranti@gmail.com</p>
                   </div>
                 </div>
 
@@ -117,29 +117,25 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-xl text-white mb-4">Follow Our Journey</h4>
-              <div className="flex space-x-4">
-                <a href="https://www.instagram.com/jhu_kranti/" target="_blank" rel="noopener noreferrer" className="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
-                  <i className="fab fa-instagram text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
-                </a>
-                <a href="https://www.facebook.com/jhukranti/" target="_blank" rel="noopener noreferrer" className="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
-                  <i className="fab fa-facebook text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
-                </a>
-                <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" rel="noopener noreferrer" className="bg-kranti-navy/30 hover:bg-kranti-gold/20 p-3 rounded-lg transition-colors duration-300 group">
-                  <i className="fab fa-youtube text-kranti-gold group-hover:text-kranti-gold text-2xl"></i>
-                </a>
+              <h4 className="font-semibold text-xl text-white mb-4">Current Set List</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>Ambarsariya / Cheap Thrills</p>
+                <p>Channa Mereya / Kabira</p>
+                <p>Physical / Sun Saathiya</p>
+                <p>No Time To Die / Bulleya</p>
+                <p>Thalli Pogathey</p>
+                <p>The Greatest</p>
+                <p>Sajdaa</p>
+                <p>Don't Blame Me</p>
+                <p className="text-kranti-gold font-medium mt-3">We are open to requests too!</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 backdrop-blur-sm rounded-xl p-6 border border-kranti-purple/30">
-              <h4 className="font-semibold text-xl text-kranti-gold mb-3">Join Our Revolution</h4>
-              <p className="text-gray-300 mb-4">Interested in auditioning for JHU Kranti? We hold auditions at the beginning of each semester.</p>
-              <p className="text-sm text-gray-400">Next auditions: Fall 2024 semester</p>
-            </div>
+
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 backdrop-blur-sm rounded-xl p-8 border border-kranti-teal/30">
+          <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 backdrop-blur-sm rounded-xl p-8">
             <h3 className="font-semibold text-2xl text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -149,7 +145,7 @@ export default function ContactSection() {
                     id="firstName"
                     value={formData.firstName}
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    className="bg-kranti-black/50 border-kranti-blue/30 text-white placeholder-gray-400 focus:border-kranti-gold"
+                    className="bg-kranti-black/50 border-transparent text-white placeholder-gray-400 focus:border-kranti-gold"
                     placeholder="Your first name"
                   />
                 </div>
@@ -159,7 +155,7 @@ export default function ContactSection() {
                     id="lastName"
                     value={formData.lastName}
                     onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    className="bg-kranti-black/50 border-kranti-blue/30 text-white placeholder-gray-400 focus:border-kranti-gold"
+                    className="bg-kranti-black/50 border-transparent text-white placeholder-gray-400 focus:border-kranti-gold"
                     placeholder="Your last name"
                   />
                 </div>
@@ -172,7 +168,7 @@ export default function ContactSection() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="bg-kranti-black/50 border-kranti-blue/30 text-white placeholder-gray-400 focus:border-kranti-gold"
+                  className="bg-kranti-black/50 border-transparent text-white placeholder-gray-400 focus:border-kranti-gold"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -180,7 +176,7 @@ export default function ContactSection() {
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
                 <Select value={formData.subject} onValueChange={(value) => handleInputChange('subject', value)}>
-                  <SelectTrigger className="bg-kranti-black/50 border-kranti-blue/30 text-white focus:border-kranti-gold">
+                  <SelectTrigger className="bg-kranti-black/50 border-transparent text-white focus:border-kranti-gold">
                     <SelectValue placeholder="Select a subject" />
                   </SelectTrigger>
                   <SelectContent>
@@ -199,7 +195,7 @@ export default function ContactSection() {
                   id="message"
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
-                  className="bg-kranti-black/50 border-kranti-blue/30 text-white placeholder-gray-400 focus:border-kranti-gold resize-none"
+                  className="bg-kranti-black/50 border-transparent text-white placeholder-gray-400 focus:border-kranti-gold resize-none"
                   rows={5}
                   placeholder="Tell us about your inquiry..."
                 />
