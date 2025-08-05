@@ -3,57 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHU Kranti</title>
-    <link rel="icon" type="image/png" href="/photos/kranti_logo.png">
+    <title>JHU Kranti - Johns Hopkins University's Premier South Asian Fusion A Cappella Group</title>
+    <link rel="stylesheet" href="./assets/index-UaSnD3n3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom, #0f172a, #1e293b);
-            color: white;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-        }
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 2rem;
-        }
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fbbf24, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #cbd5e1;
-        }
-        .coming-soon {
-            font-size: 1.5rem;
-            color: #fbbf24;
-            margin-top: 3rem;
+        @font-face {
+            font-family: 'Samarkan';
+            src: url('./SAMAN.TTF') format('truetype');
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <img src="/photos/kranti_logo.png" alt="Kranti Logo" class="logo">
-        <h1>JHU Kranti</h1>
-        <p>Johns Hopkins University's Premier South Asian Fusion A Cappella Group</p>
-        <p>Established in 2003, we blend traditional and modern South Asian musical forms with contemporary Western songs.</p>
-        <div class="coming-soon">
-            🎵 Full website coming soon! 🎵
+<body class="bg-kranti-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full backdrop-blur-sm border-b border-kranti-purple/30 z-50 bg-kranti-black/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="./photos/kranti_vector_logo.svg" alt="Kranti Logo" class="w-8 h-8" />
+                    <span class="font-bold text-xl">JHU Kranti</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-kranti-gold transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-kranti-gold transition-colors duration-300">About</a>
+                    <a href="./team.html" class="text-gray-300 hover:text-kranti-gold transition-colors duration-300">Team</a>
+                    <a href="#music" class="text-gray-300 hover:text-kranti-gold transition-colors duration-300">Music</a>
+                    <a href="#contact" class="text-gray-300 hover:text-kranti-gold transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="https://www.instagram.com/jhu_kranti/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/jhukranti/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-kranti-navy via-kranti-black to-kranti-purple/20"></div>
+        <div class="absolute inset-0">
+            <div class="h-full w-full bg-cover bg-center bg-no-repeat" style="background-image: url('./photos/IMG_7731.JPG')"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-kranti-black/80 via-kranti-black/60 to-kranti-purple/40"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+            <h1 class="font-normal text-8xl md:text-9xl lg:text-[12rem] mb-6 bg-gradient-to-r from-white via-kranti-gold via-kranti-orange to-kranti-blue bg-clip-text text-transparent drop-shadow-2xl" style="font-family: 'Samarkan', sans-serif">
+                Kranti
+            </h1>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#music" class="bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
+                    Listen to Our Music
+                </a>
+                <a href="#about" class="bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
+                    Learn Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-purple/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bold text-4xl md:text-5xl mb-6 text-white">Our Revolution</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    The word "kranti" means "revolution" in Hindi, and we embody this spirit in everything we do.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <h3 class="font-semibold text-2xl md:text-3xl text-kranti-gold" style="font-family: 'Playfair Display', serif">Our Mission</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Established in 2003, JHU Kranti has been at the forefront of cultural fusion in collegiate a cappella. We strive to present a unique vocal combination of East and West, creating revolutionary performances that honor our heritage while pushing musical boundaries.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our performances seamlessly blend traditional and modern South Asian musical forms with contemporary Western songs, creating an entirely new musical experience that celebrates both cultures.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="./photos/JHUKranti_Group.jpg" alt="Cultural performance on stage" class="rounded-xl shadow-2xl w-full" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-kranti-black/60 to-transparent rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="py-20 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-orange/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bold text-4xl md:text-5xl mb-6 text-white" style="font-family: 'Playfair Display', serif">Our Music</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Experience the revolutionary fusion of East and West through our performances and recordings.
+                </p>
+            </div>
+
+            <!-- Featured Videos Section -->
+            <div class="mb-16">
+                <h3 class="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style="font-family: 'Playfair Display', serif">Featured Performances</h3>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/30 hover:border-kranti-gold/50 transition-all duration-300">
+                        <div class="aspect-video bg-gray-800 relative">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLKPKF8cd10xW-h0S8FI-_eie-PLjHGerI" title="Spring 2025 Showcase" class="w-full h-full rounded-t-xl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-semibold text-xl text-white mb-2">Spring 2025 Showcase</h4>
+                            <p class="text-gray-300 text-sm">Our latest fusion performance showcasing the perfect blend of American and South Asian musical styles.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/30 hover:border-kranti-gold/50 transition-all duration-300">
+                        <div class="aspect-video bg-gray-800 relative">
+                            <iframe src="https://www.youtube.com/embed/xwG44-k5K9Q" title="Steel City Sapna 2025 Performance" class="w-full h-full rounded-t-xl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-semibold text-xl text-white mb-2">Steel City Sapna 2025 Performance</h4>
+                            <p class="text-gray-300 text-sm">Highlights from our annual Culture Show performance featuring intricate vocal arrangements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revolution Album Section -->
+            <div class="mb-16">
+                <h3 class="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style="font-family: 'Playfair Display', serif">Revolution Album</h3>
+                <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 backdrop-blur-sm rounded-xl p-8 border border-kranti-purple/30">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="text-center lg:text-left">
+                            <img src="./photos/Revolution_Album_Cover.jpg" alt="Revolution Album Cover" class="w-64 h-64 mx-auto lg:mx-0 rounded-xl shadow-2xl mb-6 object-cover" />
+                            <h4 class="font-semibold text-xl text-white mb-2">Revolution</h4>
+                            <p class="text-gray-300 text-sm mb-4">2020 • 7 songs, 28 min 37 sec</p>
+                            <a href="https://open.spotify.com/album/7rL5cq2yCvgs7lYrfLSsSH" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold px-6 py-3 rounded-full hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-spotify"></i>
+                                <span>Listen on Spotify</span>
+                            </a>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="font-semibold text-lg text-white mb-4">Track List</h5>
+                            <div class="max-h-64 overflow-y-auto space-y-3 pr-2">
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Ishq Sufiyana / Naina</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">4:12</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Adiye / Who's Lovin You</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">4:08</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Mitwa / Cheerleader</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">4:15</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Aaj Ibaadat</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">3:52</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Bhare Naina / Skyfall</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">4:25</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">Janam Janam / Main Agar Kahoon</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">4:18</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-kranti-black/30 rounded-lg border border-kranti-purple/20 hover:border-kranti-purple/40 transition-all duration-300">
+                                    <div>
+                                        <p class="text-white font-medium">K3G Medley: Suraj Hua Maddham / You Are My Soniya / Deewana Hai Dekho / Bole Chudiyan</p>
+                                        <p class="text-gray-400 text-sm">JHU Kranti</p>
+                                    </div>
+                                    <span class="text-gray-400 text-sm">3:27</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Gallery -->
+            <div>
+                <h3 class="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style="font-family: 'Playfair Display', serif">Performance Gallery</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="./photos/Performance_Gallery_1.jpg" alt="Performance photo 1" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="./photos/Performance_Gallery_2.jpg" alt="Performance photo 2" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="./photos/Performance_Gallery_3.jpg" alt="Performance photo 3" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="relative group cursor-pointer rounded-xl overflow-hidden">
+                        <img src="./photos/Performance_Gallery_4.jpg" alt="Performance photo 4" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.youtube.com/@jhu_kranti" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-red-600/30 transition-all duration-300 transform hover:scale-105 mr-4">
+                    <i class="fab fa-youtube"></i>
+                    <span>Watch More on YouTube</span>
+                </a>
+                <a href="https://open.spotify.com/artist/5KT3hDWDeM0aXwW2lCcnwv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300 transform hover:scale-105">
+                    <i class="fab fa-spotify"></i>
+                    <span>Listen on Spotify</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-purple/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-bold text-4xl md:text-5xl mb-6 text-white" style="font-family: 'Playfair Display', serif">Get In Touch</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to experience the revolution? Contact us for bookings, collaborations, or just to say hello.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-semibold text-xl text-white mb-4">Current Set List</h4>
+                        <div class="space-y-2 text-gray-300">
+                            <p>Ambarsariya / Cheap Thrills</p>
+                            <p>Channa Mereya / Kabira</p>
+                            <p>Physical / Sun Saathiya</p>
+                            <p>No Time To Die / Bulleya</p>
+                            <p>Thalli Pogathey</p>
+                            <p>The Greatest</p>
+                            <p>Sajdaa</p>
+                            <p>Don't Blame Me</p>
+                            <p class="text-kranti-gold font-medium mt-3">We are open to requests too!</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 p-3 rounded-lg">
+                            <i class="fas fa-calendar text-kranti-gold text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-white mb-1">Performance Booking</h4>
+                            <p class="text-gray-300">Available for campus events, cultural shows, and private performances</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 backdrop-blur-sm rounded-xl p-8">
+                    <h3 class="font-semibold text-2xl text-white mb-6" style="font-family: 'Playfair Display', serif">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-kranti-black/30 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-kranti-gold transition-colors duration-300" placeholder="Enter your first name" />
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-kranti-black/30 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-kranti-gold transition-colors duration-300" placeholder="Enter your last name" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-kranti-black/30 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-kranti-gold transition-colors duration-300" placeholder="Enter your email" />
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-medium mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 bg-kranti-black/30 border border-kranti-blue/30 rounded-lg text-white focus:outline-none focus:border-kranti-gold transition-colors duration-300">
+                                <option value="">Select a subject</option>
+                                <option value="booking">Performance Booking</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="audition">Audition Information</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-kranti-black/30 border border-kranti-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-kranti-gold transition-colors duration-300" placeholder="Tell us about your inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kranti-navy/20 border-t border-kranti-navy/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <i class="fas fa-music text-kranti-gold text-2xl"></i>
+                    <span class="font-inter font-bold text-2xl text-white">JHU Kranti</span>
+                </div>
+                <p class="text-gray-400 mb-6">Johns Hopkins University's Premier South Asian Fusion A Cappella Group</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.instagram.com/jhu_kranti/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/jhukranti/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/johnshopkinskranti/featured" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-kranti-gold transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">&copy; 2024 JHU Kranti. All rights reserved. | Established 2003</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
