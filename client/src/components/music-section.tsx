@@ -5,13 +5,13 @@ export default function MusicSection() {
     {
       title: "Spring 2025 Showcase",
       subtitle: "",
-      description: "Our latest fusion performance showcasing the perfect blend of American and South Asian musical styles.",
+      description: "Highlights of our latest arrangements from our 2024-2025 season.",
       embedId: "PLKPKF8cd10xW-h0S8FI-_eie-PLjHGerI" // YouTube playlist ID from the provided link
     },
     {
       title: "Steel City Sapna 2025 Performance",
       subtitle: "",
-      description: "Highlights from our annual Culture Show performance featuring intricate vocal arrangements.",
+      description: "Watch our full competition set from Steel City Sapna 2025.",
       embedId: "xwG44-k5K9Q" // YouTube video ID from the provided link
     }
   ];
@@ -177,26 +177,7 @@ export default function MusicSection() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <a 
-            href="https://www.youtube.com/@jhu_kranti" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-red-600/30 transition-all duration-300 transform hover:scale-105 mr-4"
-          >
-            <i className="fab fa-youtube"></i>
-            <span>Watch More on YouTube</span>
-          </a>
-          <a 
-            href="https://open.spotify.com/artist/5KT3hDWDeM0aXwW2lCcnwv" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300 transform hover:scale-105"
-          >
-            <i className="fab fa-spotify"></i>
-            <span>Listen on Spotify</span>
-          </a>
-        </div>
+
       </div>
     </section>
   );

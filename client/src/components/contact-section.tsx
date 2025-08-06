@@ -72,10 +72,7 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-gradient-to-b from-kranti-black to-kranti-navy/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Join Our Team</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to be part of the revolution? Audition for JHU Kranti and create something revolutionary together.
-          </p>
+          <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Contact Us</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">

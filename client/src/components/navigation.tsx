@@ -42,9 +42,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <Link to="/team" className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <a href="./team.html" className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
-            </Link>
+            </a>
             <button onClick={() => scrollToSection('music')} className="text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Music
             </button>
@@ -86,9 +86,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               About
             </button>
-            <Link to="/team" className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
+            <a href="./team.html" className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Team
-            </Link>
+            </a>
             <button onClick={() => scrollToSection('music')} className="block text-gray-300 hover:text-kranti-gold transition-colors duration-300">
               Music
             </button>
