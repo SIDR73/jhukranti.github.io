@@ -10,10 +10,7 @@ export default function AboutSection() {
           <div className="space-y-6">
             <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold" style={{ fontFamily: 'Playfair Display, serif' }}>Our Mission</h3>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Established in 2003, JHU Kranti has been at the forefront of cultural fusion in collegiate a cappella. We strive to present a unique vocal combination of East and West, creating performances that honor our heritage while pushing musical boundaries.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Our performances seamlessly blend traditional and modern South Asian musical forms with contemporary Western songs, creating an entirely new musical experience that celebrates both cultures.
+              Established in 2003, JHU Kranti has been at the forefront of cultural fusion in collegiate a cappella. We create a unique vocal blend of East and West, seamlessly combining traditional South Asian musical forms with contemporary Western songs. Our performances honor our heritage while pushing musical boundaries, delivering an entirely new musical experience that celebrates both cultures.
             </p>
             
             {/* Social Media Links */}
