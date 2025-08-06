@@ -46,9 +46,6 @@ export default function MusicSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Our Music</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the revolutionary fusion of East and West through our performances and recordings.
-          </p>
         </div>
 
         {/* Featured Videos Section */}

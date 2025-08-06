@@ -4,9 +4,9 @@ import Navigation from "../components/navigation";
 const teamMembers = [
   {
     firstName: "Advika",
-    lastName: "Agrawal",
+    lastName: "Agarwal",
     part: "Soprano",
-    photo: "./photos/Team/Advika_Agrawal.jpg"
+    photo: "./photos/Team/Advika_Agarwal.jpg"
   },
   {
     firstName: "Anika",
