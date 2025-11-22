@@ -3,6 +3,12 @@ import Navigation from "../components/navigation";
 // Team member data
 const teamMembers = [
   {
+    firstName: "Aditya",
+    lastName: "Nimbalagundi",
+    part: "Tenor",
+    photo: "./photos/Team/Aditya_Nimbalagundi.jpg"
+  },
+  {
     firstName: "Advika",
     lastName: "Agarwal",
     part: "Soprano",
@@ -21,34 +27,22 @@ const teamMembers = [
     photo: "./photos/Team/Arihant_Patni.png"
   },
   {
-    firstName: "Avi",
-    lastName: "Mehta",
-    part: "Vocal Percussion",
-    photo: "./photos/Team/Avi_Mehta.jpg"
-  },
-  {
     firstName: "Hasitha",
     lastName: "Putcha",
     part: "Alto",
     photo: "./photos/Team/Hasitha_Putcha.jpg"
   },
   {
-    firstName: "Hassan",
-    lastName: "Sohail",
-    part: "Tenor",
-    photo: "./photos/Team/Hassan_Sohail.jpg"
-  },
-  {
-    firstName: "Julie",
-    lastName: "Alan",
-    part: "Soprano",
-    photo: "./photos/Team/Julie_Alan.png"
-  },
-  {
-    firstName: "Kavya",
-    lastName: "Velliangiri",
+    firstName: "Janya",
+    lastName: "Jagan",
     part: "Alto",
-    photo: "./photos/Team/Kavya_Velliangiri.jpg"
+    photo: "./photos/Team/Janya_Jagan.jpg"
+  },
+  {
+    firstName: "Medha",
+    lastName: "Mandumula",
+    part: "Mezzo",
+    photo: "./photos/Team/Medha_Mandumula.jpg"
   },
   {
     firstName: "Navya",
@@ -63,6 +57,12 @@ const teamMembers = [
     photo: "./photos/Team/Oorvi_Moolchandani.jpg"
   },
   {
+    firstName: "Pranav",
+    lastName: "Potluri",
+    part: "Tenor",
+    photo: "./photos/Team/Pranav_Potluri.jpg"
+  },
+  {
     firstName: "Riya",
     lastName: "Verma",
     part: "Mezzo",
@@ -75,22 +75,10 @@ const teamMembers = [
     photo: "./photos/Team/Rohit_Thapa.jpg"
   },
   {
-    firstName: "Sharada",
-    lastName: "Vishwanath",
-    part: "Alto",
-    photo: "./photos/Team/Sharada_Vishwanath.jpg"
-  },
-  {
     firstName: "Shivesh",
     lastName: "Mishra",
     part: "Tenor",
-    photo: "./photos/Team/Shivesh_Mishra.png"
-  },
-  {
-    firstName: "Shreya",
-    lastName: "Raman",
-    part: "Mezzo",
-    photo: "./photos/Team/Shreya_Raman.jpg"
+    photo: "./photos/Team/Shivesh_Mishra.jpg"
   },
   {
     firstName: "Sidharth",
