@@ -22,21 +22,21 @@ export default function HeroSection() {
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
-        <h1 className="font-normal text-8xl md:text-9xl lg:text-[12rem] mb-6 bg-gradient-to-r from-white via-kranti-gold via-kranti-orange to-kranti-blue bg-clip-text text-transparent drop-shadow-2xl" style={{ fontFamily: 'Samarkan, sans-serif' }}>
+        <h1 className="font-normal text-8xl md:text-9xl lg:text-[12rem] mb-6 text-white drop-shadow-2xl" style={{ fontFamily: 'Samarkan, sans-serif' }}>
           Kranti
         </h1>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button 
+          <button
             onClick={() => scrollToSection('music')}
             className="bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 text-lg"
           >
-            Listen to Our Music
+            Our Music
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection('about')}
             className="bg-gradient-to-r from-kranti-gold via-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 text-lg"
           >
-            Learn Our Story
+            Our Story
           </button>
         </div>
       </div>

@@ -116,14 +116,16 @@ export default function ContactSection() {
             <div>
               <h4 className="font-semibold text-xl text-white mb-4">Current Set List</h4>
               <div className="space-y-2 text-gray-300">
+                <p>Akhiyan Udeek Diyan / Mere Dholna</p>
+                <p>Hamari Adhuri Kahani / Breathe Me / Par Channa De</p>
+                <p>All for Us / Bhare Naina</p>
                 <p>Ambarsariya / Cheap Thrills</p>
                 <p>Channa Mereya / Kabira</p>
                 <p>Physical / Sun Saathiya</p>
-                <p>No Time To Die / Bulleya</p>
-                <p>Thalli Pogathey</p>
+                <p>Thalli Pogathey / Maguva Maguva</p>
+                <p>Samjhawan / We Can't Be Friends</p>
                 <p>The Greatest</p>
                 <p>Sajdaa</p>
-                <p>Don't Blame Me</p>
                 <p className="text-kranti-gold font-medium mt-3">We are open to requests too!</p>
               </div>
             </div>
