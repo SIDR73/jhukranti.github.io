@@ -1,18 +1,50 @@
+import { useEffect, useState } from "react";
 import { Play } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "./ui/carousel";
 
 export default function MusicSection() {
+  const [galleryApi, setGalleryApi] = useState<CarouselApi>();
+  const [gallerySlide, setGallerySlide] = useState(0);
+
+  useEffect(() => {
+    if (!galleryApi) return;
+
+    const onSelect = () => setGallerySlide(galleryApi.selectedScrollSnap());
+    galleryApi.on("select", onSelect);
+
+    const autoplay = setInterval(() => {
+      if (galleryApi.canScrollNext()) {
+        galleryApi.scrollNext();
+      } else {
+        galleryApi.scrollTo(0);
+      }
+    }, 4000);
+
+    return () => {
+      galleryApi.off("select", onSelect);
+      clearInterval(autoplay);
+    };
+  }, [galleryApi]);
+
   const featuredVideos = [
+    {
+      title: "Boston Bandish 2026 Performance",
+      subtitle: "",
+      description: "Watch our full competition set from Boston Bandish 2026.",
+      embedId: "1vThehyuFnQ" // YouTube video ID from the provided link
+    },
     {
       title: "Spring 2025 Showcase",
       subtitle: "",
       description: "Highlights of our latest arrangements from our 2024-2025 season.",
       embedId: "PLKPKF8cd10xW-h0S8FI-_eie-PLjHGerI" // YouTube playlist ID from the provided link
-    },
-    {
-      title: "Steel City Sapna 2025 Performance",
-      subtitle: "",
-      description: "Watch our full competition set from Steel City Sapna 2025.",
-      embedId: "xwG44-k5K9Q" // YouTube video ID from the provided link
     }
   ];
 
@@ -38,7 +70,10 @@ export default function MusicSection() {
     "./photos/Performance_Gallery_1.jpg",
     "./photos/Performance_Gallery_2.jpg",
     "./photos/Performance_Gallery_3.jpg",
-    "./photos/Performance_Gallery_4.jpg"
+    "./photos/Performance_Gallery_4.jpg",
+    "./photos/Performance_Gallery_5.jpg",
+    "./photos/Performance_Gallery_6.JPG",
+    "./photos/Performance_Gallery_7.jpg"
   ];
 
   return (
@@ -56,9 +91,9 @@ export default function MusicSection() {
               <div key={index} className="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 backdrop-blur-sm rounded-xl overflow-hidden border border-kranti-blue/30 hover:border-kranti-gold/50 transition-all duration-300">
                 <div className="aspect-video bg-gray-800 relative">
                   <iframe
-                    src={video.embedId.startsWith('PL') 
+                    src={video.embedId.startsWith('PL')
                       ? `https://www.youtube.com/embed/videoseries?list=${video.embedId}`
-                      : `https://www.youtube.com/embed/${video.embedId}`
+                      : `https://www.youtube.com/embed/${video.embedId}${video.start ? `?start=${video.start}` : ''}`
                     }
                     title={video.title}
                     className="w-full h-full rounded-t-xl"
@@ -161,16 +196,36 @@ export default function MusicSection() {
         {/* Performance Gallery */}
         <div>
           <h3 className="font-semibold text-2xl md:text-3xl text-kranti-gold mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>Performance Gallery</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {performancePhotos.map((photo, index) => (
-              <div key={index} className="relative group cursor-pointer rounded-xl overflow-hidden">
-                <img 
-                  src={photo} 
-                  alt={`Performance photo ${index + 1}`} 
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" 
+          <div className="max-w-3xl mx-auto">
+            <Carousel setApi={setGalleryApi} opts={{ loop: true }} className="group">
+              <CarouselContent>
+                {performancePhotos.map((photo, index) => (
+                  <CarouselItem key={index}>
+                    <div className="rounded-xl overflow-hidden">
+                      <img
+                        src={photo}
+                        alt={`Performance photo ${index + 1}`}
+                        className="w-full h-[28rem] object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 bg-kranti-black/60 border-kranti-gold/30 text-white hover:bg-kranti-black/80 hover:text-kranti-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+              <CarouselNext className="right-2 bg-kranti-black/60 border-kranti-gold/30 text-white hover:bg-kranti-black/80 hover:text-kranti-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+            </Carousel>
+            <div className="flex justify-center gap-2 mt-4">
+              {performancePhotos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => galleryApi?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === gallerySlide ? "w-6 bg-kranti-gold" : "w-2 bg-gray-500/50"
+                  }`}
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

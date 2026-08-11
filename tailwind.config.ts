@@ -61,6 +61,14 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+        "kranti-navy": "var(--kranti-navy)",
+        "kranti-black": "var(--kranti-black)",
+        "kranti-blue": "var(--kranti-blue)",
+        "kranti-gold": "var(--kranti-gold)",
+        "kranti-slate": "var(--kranti-slate)",
+        "kranti-orange": "var(--kranti-orange)",
+        "kranti-purple": "var(--kranti-purple)",
+        "kranti-teal": "var(--kranti-teal)",
       },
       keyframes: {
         "accordion-down": {
