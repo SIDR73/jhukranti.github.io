@@ -28,13 +28,13 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => scrollToSection('music')}
-            className="bg-gradient-to-r from-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 text-lg"
+            className="bg-transparent border-2 border-white text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 hover:bg-white/10 text-lg"
           >
             Our Music
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="bg-gradient-to-r from-kranti-orange to-kranti-purple text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 text-lg"
+            className="bg-transparent border-2 border-white text-white font-semibold px-10 py-4 rounded-full hover-glow transition-all duration-300 transform hover:scale-105 hover:bg-white/10 text-lg"
           >
             Our Story
           </button>
