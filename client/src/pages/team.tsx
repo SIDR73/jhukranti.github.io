@@ -146,10 +146,10 @@ export default function Team() {
                     />
                   </div>
                 </div>
-                <div className="text-left">
-                                  <h3 className="font-semibold text-2xl text-gray-200 mb-1 group-hover:text-gray-300 transition-colors duration-300" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  {member.firstName} {member.lastName} | {member.part}
-                </h3>
+                <div className="text-center">
+                  <h3 className="font-semibold text-2xl text-gray-200 mb-1 group-hover:text-gray-300 transition-colors duration-300" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    {member.firstName} {member.lastName}
+                  </h3>
                 </div>
               </div>
             ))}

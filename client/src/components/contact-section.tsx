@@ -8,38 +8,35 @@ export default function ContactSection() {
           <h2 className="font-bold text-4xl md:text-5xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>Contact Us</h2>
         </div>
 
-        <div className="max-w-2xl mx-auto space-y-8">
-          <div>
-            <h3 className="font-semibold text-2xl text-kranti-gold mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>Connect With Us</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 p-3 rounded-lg">
-                  <Mail className="text-kranti-gold text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-1">Email</h4>
-                  <p className="text-gray-300">johnshopkinskranti@gmail.com</p>
-                </div>
+        <div className="max-w-2xl mx-auto space-y-8 text-center">
+          <div className="space-y-6">
+            <div className="flex flex-col items-center space-y-2">
+              <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-purple/20 p-3 rounded-lg">
+                <Mail className="text-kranti-gold text-xl" />
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 p-3 rounded-lg">
-                  <MapPin className="text-kranti-gold text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-1">Location</h4>
-                  <p className="text-gray-300">Johns Hopkins University<br />Baltimore, MD</p>
-                </div>
+              <div>
+                <h4 className="font-medium text-white mb-1">Email</h4>
+                <p className="text-gray-300">johnshopkinskranti@gmail.com</p>
               </div>
+            </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 p-3 rounded-lg">
-                  <Calendar className="text-kranti-gold text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-1">Performance Booking</h4>
-                  <p className="text-gray-300">Available for campus events, cultural shows, and private performances</p>
-                </div>
+            <div className="flex flex-col items-center space-y-2">
+              <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-teal/20 p-3 rounded-lg">
+                <MapPin className="text-kranti-gold text-xl" />
+              </div>
+              <div>
+                <h4 className="font-medium text-white mb-1">Location</h4>
+                <p className="text-gray-300">Johns Hopkins University<br />Baltimore, MD</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <div className="bg-gradient-to-br from-kranti-navy/40 to-kranti-orange/20 p-3 rounded-lg">
+                <Calendar className="text-kranti-gold text-xl" />
+              </div>
+              <div>
+                <h4 className="font-medium text-white mb-1">Performance Booking</h4>
+                <p className="text-gray-300">Available for campus events, cultural shows, and private performances</p>
               </div>
             </div>
           </div>
