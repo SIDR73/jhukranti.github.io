@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Router>
     </QueryClientProvider>
