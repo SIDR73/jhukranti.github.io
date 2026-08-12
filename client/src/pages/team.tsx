@@ -19,13 +19,13 @@ const teamMembers = [
     firstName: "Anika",
     lastName: "Narayan",
     part: "Alto",
-    photo: "./photos/Team/Anika_Narayan.png"
+    photo: "./photos/Team/Anika_Narayan.jpg"
   },
   {
     firstName: "Arihant",
     lastName: "Patni",
     part: "Baritone",
-    photo: "./photos/Team/Arihant_Patni.png"
+    photo: "./photos/Team/Arihant_Patni.jpg"
   },
   {
     firstName: "Hasitha",
@@ -49,7 +49,7 @@ const teamMembers = [
     firstName: "Navya",
     lastName: "Balamurugan",
     part: "Mezzo",
-    photo: "./photos/Team/Navya_Balamurugan.png"
+    photo: "./photos/Team/Navya_Balamurugan.jpg"
   },
   {
     firstName: "Oorvi",
@@ -86,7 +86,7 @@ const teamMembers = [
     firstName: "Sidharth",
     lastName: "Raghavan",
     part: "Bass Vocalist",
-    photo: "./photos/Team/Sidharth_Raghavan.png"
+    photo: "./photos/Team/Sidharth_Raghavan.jpg"
   },
   {
     firstName: "Varsha",
@@ -98,13 +98,13 @@ const teamMembers = [
     firstName: "Viha",
     lastName: "Chakrapani",
     part: "Soprano",
-    photo: "./photos/Team/Viha_Chakrapani.png"
+    photo: "./photos/Team/Viha_Chakrapani.jpg"
   },
   {
     firstName: "Yara",
     lastName: "Changyit-Levin",
     part: "Alto",
-    photo: "./photos/Team/Yara_Changyit-Levin.png",
+    photo: "./photos/Team/Yara_Changyit-Levin.jpg",
     cropTop: true
   }
 ];
