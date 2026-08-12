@@ -6,7 +6,8 @@ const teamMembers = [
     firstName: "Aditya",
     lastName: "Nimbalagundi",
     part: "Tenor",
-    photo: "./photos/Team/Aditya_Nimbalagundi.jpg"
+    photo: "./photos/Team/Aditya_Nimbalagundi.jpg",
+    cropTop: true
   },
   {
     firstName: "Advika",
@@ -54,7 +55,8 @@ const teamMembers = [
     firstName: "Oorvi",
     lastName: "Moolchandani",
     part: "Mezzo",
-    photo: "./photos/Team/Oorvi_Moolchandani.jpg"
+    photo: "./photos/Team/Oorvi_Moolchandani.jpg",
+    cropTop: true
   },
   {
     firstName: "Pranav",
@@ -102,7 +104,8 @@ const teamMembers = [
     firstName: "Yara",
     lastName: "Changyit-Levin",
     part: "Alto",
-    photo: "./photos/Team/Yara_Changyit-Levin.png"
+    photo: "./photos/Team/Yara_Changyit-Levin.png",
+    cropTop: true
   }
 ];
 
@@ -112,9 +115,9 @@ export default function Team() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-purple/10">
+      <section className="pt-20 pb-4 bg-gradient-to-b from-kranti-black via-kranti-navy/30 to-kranti-purple/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h1 className="font-bold text-5xl md:text-6xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
               Our Team
             </h1>
@@ -123,7 +126,7 @@ export default function Team() {
       </section>
 
       {/* Team Members Grid */}
-      <section className="py-16">
+      <section className="pt-4 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -133,7 +136,7 @@ export default function Team() {
                     <img 
                       src={member.photo} 
                       alt={`${member.firstName} ${member.lastName} portrait`}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover${member.cropTop ? ' object-top' : ''}`}
                       onError={(e) => {
                         // Fallback to initials if image fails to load
                         const target = e.target as HTMLImageElement;
