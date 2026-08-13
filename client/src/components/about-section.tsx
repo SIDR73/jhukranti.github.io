@@ -58,12 +58,11 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="relative">
-            <img 
-              src="./photos/JHUKranti_Group.jpg" 
-              alt="JHU Kranti performing on stage in traditional South Asian attire" 
-              className="rounded-xl shadow-2xl w-full object-cover" 
+            <img
+              src="./photos/JHUKranti_Group.jpg"
+              alt="JHU Kranti performing on stage in traditional South Asian attire"
+              className="rounded-xl shadow-2xl w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-kranti-black/60 to-transparent rounded-xl"></div>
           </div>
         </div>
 
