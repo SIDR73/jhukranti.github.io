@@ -7,7 +7,7 @@ const teamMembers = [
     lastName: "Nimbalagundi",
     part: "Tenor",
     photo: "./photos/Team/Aditya_Nimbalagundi.jpg",
-    cropTop: true
+    objectPosition: "50% 25%"
   },
   {
     firstName: "Advika",
@@ -56,7 +56,7 @@ const teamMembers = [
     lastName: "Moolchandani",
     part: "Mezzo",
     photo: "./photos/Team/Oorvi_Moolchandani.jpg",
-    cropTop: true
+    objectPosition: "50% 0%"
   },
   {
     firstName: "Pranav",
@@ -105,7 +105,7 @@ const teamMembers = [
     lastName: "Changyit-Levin",
     part: "Alto",
     photo: "./photos/Team/Yara_Changyit-Levin.jpg",
-    cropTop: true
+    objectPosition: "50% 0%"
   }
 ];
 
@@ -136,7 +136,8 @@ export default function Team() {
                     <img 
                       src={member.photo} 
                       alt={`${member.firstName} ${member.lastName} portrait`}
-                      className={`w-full h-full object-cover${member.cropTop ? ' object-top' : ''}`}
+                      className="w-full h-full object-cover"
+                      style={member.objectPosition ? { objectPosition: member.objectPosition } : undefined}
                       onError={(e) => {
                         // Fallback to initials if image fails to load
                         const target = e.target as HTMLImageElement;
@@ -156,6 +157,24 @@ export default function Team() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Alumni */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-bold text-3xl md:text-4xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
+            Alumni
+          </h2>
+          <div className="text-gray-400 text-sm italic space-y-1">
+            <p><span className="text-kranti-gold">2026:</span> Viha Chakrapani, Sidharth Raghavan, Rohit Thapa, Yara Changyit-Levin, Hasitha Putcha</p>
+            <p><span className="text-kranti-gold">2025:</span> Avi Mehta, Sharada Vishwanath, Shreya Raman, Hassan Sohail, Kavya Velliangiri, Julie Alan, Varsha Arun</p>
+            <p><span className="text-kranti-gold">2024:</span> Sayantika Roy, Sharanya Parvathaneni, Sangeeta Koilada</p>
+            <p><span className="text-kranti-gold">2023:</span> Manasi Prasant, Mihir Chakravarthi, Rahul Swaminathan, Niranjan Behera, Trisha Palaka, Sahana Kumar, Ria Datwani, Jay Aswala, Parijat Banerjee</p>
+            <p><span className="text-kranti-gold">2022:</span> Pratiksha Boinapally, Ajay Ananthakrishnan, Sonia Sukumar</p>
+            <p><span className="text-kranti-gold">2021:</span> Aashay Patel, Sid Kavuturu, Ramya Reddy, Alisha Kodibagkar, Divya Anand</p>
+            <p><span className="text-kranti-gold">2020 - 2003:</span> Jessica Rana, Aishwarya Pradeep, Varun Ventakesh, Shivansh Sachdeva, Vidur Kailash, Anuja Shah, Nik Moondra, Sai Pinni, Tanay Agarwal, Ronak Mehta, Nirmal Krishnan, Abhilash Suresh, Ronak Desai and many more!</p>
           </div>
         </div>
       </section>
