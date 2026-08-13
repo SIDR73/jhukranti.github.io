@@ -67,13 +67,16 @@ export default function MusicSection() {
   ];
 
   const performancePhotos = [
+    "./photos/Performance_Gallery_0.jpg",
     "./photos/Performance_Gallery_1.jpg",
     "./photos/Performance_Gallery_2.jpg",
     "./photos/Performance_Gallery_3.jpg",
     "./photos/Performance_Gallery_4.jpg",
     "./photos/Performance_Gallery_5.jpg",
     "./photos/Performance_Gallery_6.JPG",
-    "./photos/Performance_Gallery_7.jpg"
+    "./photos/Performance_Gallery_7.jpg",
+    "./photos/Performance_Gallery_8.jpg",
+    "./photos/Performance_Gallery_9.jpg"
   ];
 
   return (
